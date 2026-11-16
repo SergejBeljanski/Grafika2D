@@ -57,7 +57,7 @@ void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, in
         if (key == GLFW_KEY_Z) addBubbles(goldX, goldY, goldFlipped, 0.135f);
         if (key == GLFW_KEY_K) addBubbles(clownX, clownY, clownFlipped, 0.1153125f);
 
-        // Negativno vreme znači da kraba nije u skoku
+        // Negativno vreme znaci da kraba nije u skoku
         if (key == GLFW_KEY_SPACE && initialJumpTime < 0)
             initialJumpTime = glfwGetTime();
 
@@ -125,7 +125,10 @@ void processInput(GLFWwindow* window, float dt) {
     if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) clownY += 0.52f * dt;
     if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) clownY -= 0.52f * dt;
 
-    // Granice racunamo sa polovinom sirine i visine
+    // -1 i 1 su leva i desna ivica ekrana.
+    // border je debljina okvira akvarijuma u koordinatama.
+    // 0.135f je polovina sirine ribice, gold/clownxy centar
+    // min sprecava prelazak desne granice, a max leve.
     float border = 20.0f / screenWidth;
     goldX = max(-1 + border + 0.135f, min(goldX, 1 - border - 0.135f));
     goldY = max(sandTop + 0.16f, min(goldY, waterTop - 0.16f));
