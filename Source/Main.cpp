@@ -125,7 +125,7 @@ void processInput(GLFWwindow* window, float dt) {
     if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) clownY += 0.52f * dt;
     if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) clownY -= 0.52f * dt;
 
-    // Granice računamo sa polovinom širine i visine
+    // Granice racunamo sa polovinom sirine i visine
     float border = 20.0f / screenWidth;
     goldX = max(-1 + border + 0.135f, min(goldX, 1 - border - 0.135f));
     goldY = max(sandTop + 0.16f, min(goldY, waterTop - 0.16f));
