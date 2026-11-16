@@ -15,7 +15,7 @@ void main()
         outCol = vec4(chCol.rg, chCol.b + uB, chCol.a + uA);
     } else {
         outCol = texture(uTex0, chTex);
-        // Potpis je poluprovidan. Providna pozadina slike i dalje ostaje providna.
+        // Potpis je poluprovidan
         outCol.a = outCol.a * (1.0 + uA);
     }
 }
