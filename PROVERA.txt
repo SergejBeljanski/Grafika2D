@@ -1,0 +1,30 @@
+Uspjesno procitao fajl sa putanje "Shaders/basic.vert"!
+Uspjesno procitao fajl sa putanje "Shaders/basic.frag"!
+OpenGL: 3.3.0 - Build 32.0.101.7088
+PASS: Chest starts closed
+PASS: C opens chest
+PASS: Key repeat does not toggle chest
+PASS: C closes chest
+PASS: Goldfish movement speed and direction
+PASS: Independent simultaneous movement
+PASS: Both fish mirror on direction change
+PASS: Goldfish wall and sand limits
+PASS: Clownfish wall and surface limits
+PASS: Crab left wall limit
+PASS: Crab right wall limit
+PASS: Z creates three bubbles
+PASS: K creates three bubbles
+PASS: Bubbles removed above surface
+PASS: Vertical throw jump formula
+PASS: No double jump
+PASS: Crab landing
+PASS: Closed chest frame saved
+PASS: Left black border is exactly 10 pixels
+PASS: Bottom black border is exactly 10 pixels
+PASS: Open chest frame saved
+PASS: No OpenGL errors
+PASS: Escape exit
+
+Kretanje pojednostavljeno: svaki taster direktno menja X ili Y; bez normalizacije vektora.
+Posle ove izmene: Debug x64 build PASS; Release x64 build PASS.
+Posle uklanjanja aspect korekcije: Debug i Release x64 PASS; prikaz sa fiksnim koordinatama na OpenGL 3.3 PASS.
